@@ -1,0 +1,193 @@
+/* Field wrapper */
+.jf-field {
+  padding: 12px var(--jf-gutter);
+  transition: background-color 0.2s ease;
+}
+
+.jf-field:focus-within {
+  background: var(--jf-color-active);
+}
+
+.jf-field--error,
+.jf-field--error:focus-within {
+  background: var(--jf-color-error-bg);
+}
+
+.jf-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.jf-label__star {
+  margin-left: 2px;
+  color: var(--jf-color-error);
+}
+
+.jf-sublabel {
+  display: block;
+  min-height: 13px;
+  margin-top: 4px;
+  color: var(--jf-color-subtext);
+  font-size: 0.8125rem;
+}
+
+/* Text inputs, selects, textarea */
+.jf-control {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--jf-color-border);
+  border-radius: var(--jf-radius-sm);
+  background-color: var(--jf-color-white);
+  color: var(--jf-color-text);
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jf-field--half .jf-control {
+  max-width: var(--jf-field-width);
+}
+
+textarea.jf-control {
+  height: 163px;
+  padding: 10px;
+  resize: vertical;
+}
+
+select.jf-control {
+  padding-right: 36px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230b2d5c' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.jf-control:hover {
+  border-color: rgba(11, 45, 92, 0.5);
+  box-shadow: 0 0 0 2px rgba(11, 45, 92, 0.25);
+}
+
+.jf-control:focus {
+  outline: none;
+  border-color: var(--jf-color-text);
+  box-shadow: 0 0 0 3px rgba(11, 45, 92, 0.25);
+}
+
+.jf-control--error,
+.jf-control--error:hover,
+.jf-control--error:focus {
+  border-color: var(--jf-color-error);
+  box-shadow: 0 0 3px var(--jf-color-error);
+}
+
+/* Full name and address parts */
+.jf-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.jf-part {
+  flex: 1 1 180px;
+}
+
+.jf-part--full {
+  flex-basis: 100%;
+}
+
+/* Radio buttons and checkboxes */
+.jf-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.jf-choices > .jf-control {
+  max-width: var(--jf-field-width);
+}
+
+.jf-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.jf-choice__input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  border: 2px solid var(--jf-color-border);
+  background-color: var(--jf-color-white);
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.jf-choice__input[type='checkbox'] {
+  border-radius: 4px;
+}
+
+.jf-choice__input[type='radio'] {
+  border-radius: 50%;
+}
+
+.jf-choice__input:hover {
+  border-color: rgba(242, 140, 40, 0.7);
+}
+
+.jf-choice__input:checked {
+  border-color: var(--jf-color-accent);
+  background-color: var(--jf-color-accent);
+}
+
+.jf-choice__input[type='checkbox']:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5l3 3 5-6' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+.jf-choice__input[type='radio']:checked {
+  box-shadow: inset 0 0 0 3px var(--jf-color-white);
+}
+
+.jf-choice__input:focus-visible {
+  outline: 3px solid rgba(242, 140, 40, 0.4);
+  outline-offset: 2px;
+}
+
+.jf-choice__label {
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+/* Error message */
+.jf-error {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 6px 12px;
+  border-radius: var(--jf-radius-sm);
+  background: var(--jf-color-error);
+  color: var(--jf-color-white);
+  font-size: 0.875rem;
+}
+
+/* Hidden spam trap */
+.jf-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .jf-field--half .jf-control,
+  .jf-choices > .jf-control {
+    max-width: 100%;
+  }
+}

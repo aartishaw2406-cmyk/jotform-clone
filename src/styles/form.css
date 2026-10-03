@@ -1,0 +1,144 @@
+/* Card */
+.jf-form {
+  max-width: var(--jf-card-width);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--jf-color-card);
+  border-top: 4px solid var(--jf-color-accent);
+  border-radius: var(--jf-radius-lg);
+  box-shadow: var(--jf-shadow);
+}
+
+/* Heading bands */
+.jf-header {
+  padding: 24px 32px;
+  background: var(--jf-color-band);
+  text-align: center;
+}
+
+.jf-header--main {
+  padding: 32px;
+}
+
+.jf-header__image {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto 16px;
+}
+
+.jf-header__title {
+  margin: 0;
+  color: var(--jf-color-text);
+  font-size: 1.25rem;
+}
+
+.jf-header--main .jf-header__title {
+  font-size: 1.75rem;
+}
+
+.jf-header__subtitle {
+  margin: 4px 0 0;
+  color: var(--jf-color-subtext);
+  font-size: 0.875rem;
+}
+
+/* Sections */
+.jf-section {
+  padding-bottom: 12px;
+}
+
+.jf-section + .jf-section {
+  margin-top: 12px;
+}
+
+/* Fee notice */
+.jf-notice {
+  margin: 20px var(--jf-gutter);
+  padding: 20px;
+  background: var(--jf-color-white);
+  border: 1px solid var(--jf-color-divider);
+  border-left: 4px solid var(--jf-color-accent);
+  border-radius: var(--jf-radius-md);
+}
+
+.jf-notice__title {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+}
+
+.jf-notice__text {
+  margin: 0 0 16px;
+  color: var(--jf-color-subtext);
+}
+
+/* Buttons */
+.jf-actions {
+  display: flex;
+  justify-content: center;
+  padding: 24px var(--jf-gutter) 32px;
+}
+
+.jf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 48px;
+  padding: 0 28px;
+  border: 1px solid var(--jf-color-accent-border);
+  border-radius: var(--jf-radius-md);
+  background: var(--jf-color-accent);
+  color: var(--jf-color-white);
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.jf-button:hover {
+  background: var(--jf-color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.jf-button:focus-visible {
+  outline: 3px solid rgba(242, 140, 40, 0.4);
+  outline-offset: 2px;
+}
+
+.jf-button--outline {
+  background: var(--jf-color-white);
+  color: var(--jf-color-accent-dark);
+}
+
+.jf-button--outline:hover {
+  background: var(--jf-color-active);
+}
+
+/* Thank-you screen */
+.jf-success {
+  padding: 56px var(--jf-gutter);
+  text-align: center;
+}
+
+.jf-success .jf-header__title {
+  font-size: 1.75rem;
+}
+
+.jf-success .jf-header__subtitle {
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .jf-header,
+  .jf-header--main {
+    padding: 20px 16px;
+  }
+
+  .jf-button {
+    width: 100%;
+  }
+}

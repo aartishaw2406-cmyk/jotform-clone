@@ -1,0 +1,29 @@
+/* All colors, fonts and sizes live here. Change them in one place. */
+.jf-page {
+  --jf-color-page: #ffffff;
+  --jf-color-card: #f5f9ff;
+  --jf-color-band: #eaf2ff;
+  --jf-color-text: #0b2d5c;
+  --jf-color-subtext: #254776;
+  --jf-color-border: #0b2d5c;
+  --jf-color-divider: #c9d9f2;
+  --jf-color-accent: #f28c28;
+  --jf-color-accent-dark: #c27020;
+  --jf-color-accent-border: #d97706;
+  --jf-color-active: #fff1e6;
+  --jf-color-error: #d93025;
+  --jf-color-error-bg: #ffe2e2;
+  --jf-color-white: #ffffff;
+
+  --jf-font-family: Arial, sans-serif;
+  --jf-font-size: 16px;
+
+  --jf-radius-sm: 10px;
+  --jf-radius-md: 12px;
+  --jf-radius-lg: 20px;
+
+  --jf-card-width: 752px;
+  --jf-field-width: 310px;
+  --jf-gutter: 38px;
+  --jf-shadow: 0 10px 30px rgba(11, 45, 92, 0.12);
+}
